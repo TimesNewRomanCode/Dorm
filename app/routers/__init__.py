@@ -1,9 +1,9 @@
 from fastapi import APIRouter
-from .auth import router as auth_router
-from .user import router as user_router
+from .studentRecords import router as studentRecords_router
+
 
 
 router = APIRouter(prefix="/api")
 
-router.include_router(auth_router)
+router.include_router(studentRecords_router)
 

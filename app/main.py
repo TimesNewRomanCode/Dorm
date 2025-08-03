@@ -12,7 +12,7 @@ app = FastAPI(
     # exception_handlers={
     #     HTTPException: http_exception_handler,
     #     RequestValidationError: validation_exception_handler,
-    #     Exceptio  n: global_exception_handler,
+    #     Exception: global_exception_handler,
     # },
 )
 

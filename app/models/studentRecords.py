@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from sqlalchemy import String, Boolean, DateTime, func, int
+from sqlalchemy import String, Boolean, DateTime, func, Integer
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .base import Base
@@ -10,10 +10,11 @@ from .base import Base
 class studentRecords(Base):
     __tablename__ = "studentRecords"
 
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
     username: Mapped[str] = mapped_column(String, unique=True, nullable=False)
-    course: Mapped[int] = mapped_column(int, unique=False, nullable=False)
+    course: Mapped[int] = mapped_column(Integer, nullable=False)
     performance: Mapped[bool] = mapped_column(Boolean, nullable=False)
-    duties: Mapped[int] = mapped_column(int, unique=False, nullable=False)
-    transition: Mapped[int] = mapped_column(int, unique=False, nullable=False)
-    general_cleaning: Mapped[int] = mapped_column(int, unique=False, nullable=False)
+    duties: Mapped[int] = mapped_column(Integer, nullable=False)
+    transition: Mapped[int] = mapped_column(Integer, nullable=False)
+    general_cleaning: Mapped[int] = mapped_column(Integer, nullable=False)
 
