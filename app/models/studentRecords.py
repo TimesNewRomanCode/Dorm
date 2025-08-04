@@ -1,7 +1,4 @@
-from datetime import datetime
-from typing import Optional
-
-from sqlalchemy import String, Boolean, DateTime, func, Integer
+from sqlalchemy import String, Boolean, Integer
 from sqlalchemy.orm import Mapped, mapped_column
 
 from .base import Base

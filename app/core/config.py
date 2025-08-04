@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from pydantic import HttpUrl, EmailStr, field_validator
+from pydantic import field_validator
+
 
 
 class Settings(BaseSettings):
